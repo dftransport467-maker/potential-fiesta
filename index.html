@@ -20,13 +20,13 @@
         }
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             background-color: #2d3748;
             color: #fcfbf7;
             margin-bottom: 30px;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
         }
         .container {
@@ -34,6 +34,18 @@
             margin: 0 auto;
         }
         
+        /* About Section */
+        .about-section {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
         /* Search Section Styling */
         .search-container {
             margin: 30px 0;
@@ -144,9 +156,15 @@
 
     <main class="container">
         
+        <!-- About Us Section -->
+        <section class="about-section">
+            <h2>About Our Repository</h2>
+            <p>Welcome to Tajiri 3 Inc. We are dedicated to preserving and sharing the rich heritage of traditional Caribbean herbal medicine. Our catalog serves as an educational reference guide to natural bush teas, leaves, and roots passed down through generations for health and vitality.</p>
+        </section>
+
         <!-- Interactive Search Bar -->
         <section class="search-container">
-            <input type="text" id="herbSearch" class="search-bar" placeholder="Search for herbs, ailments, or keywords...">
+            <input type="text" id="herbSearch" class="search-bar" placeholder="Search for herbs, ailments, or keywords (e.g., sleep, detox, cold)...">
         </section>
 
         <h2>Our Natural Herbal Collection</h2>
@@ -156,27 +174,51 @@
         <section class="grid" id="herbGrid">
             <article class="card">
                 <h3>Cerasee (Bitter Melon)</h3>
-                <p>Traditionally used in the Caribbean for blood purification, detoxing, and managing diabetes symptoms.</p>
+                <p>Traditionally used across the islands for deep blood purification, full-body detoxing, skin rashes, and managing blood sugar levels.</p>
                 <span class="badge">Detox & Blood Health</span>
             </article>
 
             <article class="card">
                 <h3>Lemongrass (Fever Grass)</h3>
-                <p>A fragrant herb popular for treating colds, flu, and reducing fever. Excellent for relaxation blends.</p>
+                <p>A fragrant staple popular for treating flu, reducing heavy fever symptoms, easing chest congestion, and promoting evening relaxation.</p>
                 <span class="badge">Immune & Relaxation</span>
             </article>
 
             <article class="card">
                 <h3>Ginger & Mint Blend</h3>
-                <p>A soothing remedy widely used across the islands to ease digestive issues, nausea, and inflammation.</p>
+                <p>A soothing, staple island remedy widely prepared to rapidly ease digestive discomfort, morning nausea, gas, and systemic inflammation.</p>
                 <span class="badge">Digestive Health</span>
+            </article>
+
+            <article class="card">
+                <h3>Soursop Leaf (Graviola)</h3>
+                <p>Highly praised in traditional medicine for its calming properties. Often consumed as a evening brew to combat insomnia, quiet nerves, and lower blood pressure.</p>
+                <span class="badge">Sleep & Nerve Calm</span>
+            </article>
+
+            <article class="card">
+                <h3>Moringa (Never Die)</h3>
+                <p>Known as a nutritional powerhouse plant. The leaves are brewed into a daily tonic to boost energy, increase physical stamina, and strengthen natural immunity.</p>
+                <span class="badge">Energy & Vitality</span>
+            </article>
+
+            <article class="card">
+                <h3>Periwinkle (Old Maid)</h3>
+                <p>A plant historically gathered by island elders to brew a bitter tea traditionally linked to managing diabetes, improving circulation, and easing sore throats.</p>
+                <span class="badge">Circulation & Sugar Balance</span>
+            </article>
+
+            <article class="card">
+                <h3>Dandelion (Wild Endive)</h3>
+                <p>Utilized broadly as a natural diuretic tea. Excellent for supporting liver health, flushing out water retention, and supporting kidney function.</p>
+                <span class="badge">Liver & Kidney Support</span>
             </article>
         </section>
 
         <!-- Remedy Inquiry Form -->
         <section class="form-section">
             <h2>Remedy Inquiry Form</h2>
-            <p style="margin-bottom: 20px;">Can't find what you need? Send us a question about specific herbs or traditional remedies, and we will get back to you.</p>
+            <p style="margin-bottom: 20px;">Can't find a specific plant? Send us a question about traditional preparations or specific herbs, and we will get back to you.</p>
             
             <form id="inquiryForm">
                 <div class="form-group">
@@ -196,6 +238,7 @@
                         <option value="immune">Immune & Cold Relief</option>
                         <option value="digestive">Digestive Support</option>
                         <option value="detox">Detox & Cleansing</option>
+                        <option value="sleep">Sleep & Relaxation</option>
                         <option value="other">Other Plant Inquiries</option>
                     </select>
                 </div>
@@ -223,17 +266,3 @@
                     card.style.display = "block";
                 } else {
                     card.style.display = "none";
-                }
-            });
-        });
-
-        // Basic form submit handling preventDefault
-        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your inquiry! Your request has been simulated successfully.');
-            this.reset();
-        });
-    </script>
-
-</body>
-</html>
