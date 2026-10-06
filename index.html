@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,19 @@
             line-height: 1.6;
             padding: 20px;
         }
+        
+        /* Promo Discount Banner */
+        .promo-banner {
+            background-color: #c53030;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         header {
             text-align: center;
             padding: 50px 20px;
@@ -79,18 +92,42 @@
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
-            padding: 20px;
+            overflow: hidden;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
         }
         .card:hover {
             transform: translateY(-2px);
         }
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #edf2f7;
+        }
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
         .card h3 {
             color: #2d3748;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
             border-bottom: 2px solid #2d3748;
             padding-bottom: 5px;
+        }
+        .price-tag {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2f855a;
+            margin-bottom: 10px;
+        }
+        .card p {
+            flex-grow: 1;
+            margin-bottom: 15px;
         }
         .badge {
             display: inline-block;
@@ -98,18 +135,23 @@
             padding: 2px 8px;
             border-radius: 4px;
             font-size: 0.85rem;
-            margin-top: 10px;
+            align-self: flex-start;
         }
 
-        /* Form Styling */
+        /* Forms Layout Dual Column */
+        .forms-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0 80px 0;
+        }
+
         .form-section {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 30px;
-            margin-top: 50px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            margin-bottom: 60px;
         }
         .form-section h2 {
             margin-bottom: 20px;
@@ -144,6 +186,7 @@
             font-size: 1rem;
             cursor: pointer;
             font-weight: bold;
+            width: 100%;
             transition: background 0.2s ease;
         }
         .submit-btn:hover {
@@ -188,6 +231,9 @@
             flex-direction: column;
             overflow: hidden;
         }
+        .chat-window.active {
+            display: flex;
+        }
         .chat-header {
             background-color: #2d3748;
             color: #fcfbf7;
@@ -215,6 +261,7 @@
             padding: 10px 14px;
             border-radius: 15px;
             font-size: 0.95rem;
+            word-wrap: break-word;
         }
         .bot-message {
             background-color: #edf2f7;
@@ -256,6 +303,11 @@
 </head>
 <body>
 
+    <!-- Intro Discount Promotional Banner -->
+    <div class="promo-banner">
+        🌱 INTRODUCTORY OFFER: Use Code BUSHTEA10 for 10% Off Your First Order!
+    </div>
+
     <header>
         <h1>Tajiri 3 Inc</h1>
         <p>Caribbean Bush Teas & Herbal Remedies</p>
@@ -266,48 +318,20 @@
         <!-- About Us Section -->
         <section class="about-section">
             <h2>About Our Repository</h2>
-            <p>Welcome to Tajiri 3 Inc. We are dedicated to preserving and sharing the rich heritage of traditional Caribbean herbal medicine. Our catalog serves as an educational reference guide to natural bush teas, leaves, and roots passed down through generations for health and vitality.</p>
+            <p>Welcome to Tajiri 3 Inc. We are dedicated to preserving and sharing the rich heritage of traditional Caribbean herbal medicine. Our catalog serves as an educational reference guide and premium source for natural bush teas, leaves, and roots passed down through generations for health and vitality.</p>
         </section>
 
         <!-- Interactive Search Bar -->
         <section class="search-container">
-            <input type="text" id="herbSearch" class="search-bar" placeholder="Search for herbs, ailments, or keywords (e.g., sleep, detox, cold)...">
+            <input type="text" id="herbSearch" class="search-bar" placeholder="Search for herbs, price, ailments, or keywords (e.g., sleep, detox, cold)...">
         </section>
 
-        <h2>Our Natural Herbal Collection</h2>
-        <p style="margin-bottom: 20px;">Explore traditional Caribbean plants, leaves, and herbs and their natural remedies.</p>
+        <h2>Our Premium Herbal Collection</h2>
+        <p style="margin-bottom: 20px;">Explore authentic Caribbean plants, leaves, and herbs curated for your wellness journey.</p>
 
-        <!-- Herb Cards Directory -->
+        <!-- Herb Cards Directory with Images & Per-Ounce Pricing -->
         <section class="grid" id="herbGrid">
             <article class="card">
-                <h3>Cerasee (Bitter Melon)</h3>
-                <p>Traditionally used across the islands for deep blood purification, full-body detoxing, skin rashes, and managing blood sugar levels.</p>
-                <span class="badge">Detox & Blood Health</span>
-            </article>
-
-            <article class="card">
-                <h3>Lemongrass (Fever Grass)</h3>
-                <p>A fragrant staple popular for treating flu, reducing heavy fever symptoms, easing chest congestion, and promoting evening relaxation.</p>
-                <span class="badge">Immune & Relaxation</span>
-            </article>
-
-            <article class="card">
-                <h3>Ginger & Mint Blend</h3>
-                <p>A soothing, staple island remedy widely prepared to rapidly ease digestive discomfort, morning nausea, gas, and systemic inflammation.</p>
-                <span class="badge">Digestive Health</span>
-            </article>
-
-            <article class="card">
-                <h3>Soursop Leaf (Graviola)</h3>
-                <p>Highly praised in traditional medicine for its calming properties. Often consumed as an evening brew to combat insomnia, quiet nerves, and lower blood pressure.</p>
-                <span class="badge">Sleep & Nerve Calm</span>
-            </article>
-
-            <article class="card">
-                <h3>Moringa (Never Die)</h3>
-                <p>Known as a nutritional powerhouse plant. The leaves are brewed into a daily tonic to boost energy, increase physical stamina, and strengthen natural immunity.</p>
-                <span class="badge">Energy & Vitality</span>
-            </article>
-
-            <article class="card">
-                <h3>Periwinkle (Old Maid)</h3>
+                <img class="card-img" src="https://gstatic.com" alt="Cerasee Leaves">
+                <div class="card-content">
+                    <h3>Cerasee (Bitter Melon)</h3>
