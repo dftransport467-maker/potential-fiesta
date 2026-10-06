@@ -18,8 +18,6 @@
             line-height: 1.6;
             padding: 20px;
         }
-        
-        /* Promo Discount Banner */
         .promo-banner {
             background-color: #c53030;
             color: #ffffff;
@@ -28,9 +26,7 @@
             font-weight: bold;
             font-size: 1rem;
             letter-spacing: 0.5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
         header {
             text-align: center;
             padding: 50px 20px;
@@ -38,272 +34,56 @@
             color: #fcfbf7;
             margin-bottom: 30px;
         }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        /* About Section */
-        .about-section {
-            text-align: center;
-            margin: 40px auto;
-            max-width: 800px;
-            padding: 0 20px;
-        }
-        .about-section h2 {
-            margin-bottom: 15px;
-        }
-        .about-section p {
-            font-size: 1.1rem;
-            color: #4a5568;
-        }
-
-        /* Search Section Styling */
-        .search-container {
-            margin: 30px 0;
-            text-align: center;
-        }
+        h1 { font-size: 2.8rem; margin-bottom: 10px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .about-section { text-align: center; margin: 40px auto; max-width: 800px; padding: 0 20px; }
+        .about-section h2 { margin-bottom: 15px; }
+        .search-container { margin: 30px 0; text-align: center; }
         .search-bar {
-            width: 100%;
-            max-width: 500px;
-            padding: 12px 20px;
-            font-size: 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 25px;
-            outline: none;
-            transition: border-color 0.3s ease;
+            width: 100%; max-width: 500px; padding: 12px 20px; font-size: 1rem;
+            border: 2px solid #e2e8f0; border-radius: 25px; outline: none;
         }
-        .search-bar:focus {
-            border-color: #2d3748;
-        }
-
-        /* Grid and Cards Layout */
         .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px; margin-top: 20px;
         }
         .card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease;
-            display: flex;
-            flex-direction: column;
+            background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px;
+            overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex; flex-direction: column;
         }
-        .card:hover {
-            transform: translateY(-2px);
-        }
-        .card-img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            background-color: #edf2f7;
-        }
-        .card-content {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .card h3 {
-            color: #2d3748;
-            margin-bottom: 5px;
-            border-bottom: 2px solid #2d3748;
-            padding-bottom: 5px;
-        }
-        .price-tag {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #2f855a;
-            margin-bottom: 10px;
-        }
-        .card p {
-            flex-grow: 1;
-            margin-bottom: 15px;
-        }
-        .badge {
-            display: inline-block;
-            background: #edf2f7;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            align-self: flex-start;
-        }
-
-        /* Forms Layout Column */
-        .forms-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin: 50px 0 80px 0;
-        }
-
-        .form-section {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .form-section h2 {
-            margin-bottom: 20px;
-            border-bottom: 2px solid #2d3748;
-            padding-bottom: 5px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #cbd5e0;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        .form-group textarea {
-            resize: vertical;
-            height: 120px;
-        }
-        .submit-btn {
-            background-color: #2d3748;
-            color: #fcfbf7;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            cursor: pointer;
-            font-weight: bold;
-            width: 100%;
-            transition: background 0.2s ease;
-        }
-        .submit-btn:hover {
-            background-color: #4a5568;
-        }
-
-        /* Floating AI Chatbot Interface */
-        .chat-widget {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
-        .chat-button {
-            width: 60px;
-            height: 60px;
-            background-color: #2d3748;
-            color: #fcfbf7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
-        }
-        .chat-button:hover {
-            transform: scale(1.05);
-        }
-        .chat-window {
-            display: none;
-            width: 350px;
-            height: 450px;
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-            position: absolute;
-            bottom: 75px;
-            right: 0;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .chat-window.active {
-            display: flex;
-        }
-        .chat-header {
-            background-color: #2d3748;
-            color: #fcfbf7;
-            padding: 15px;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .chat-close {
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-        .chat-messages {
-            flex: 1;
-            padding: 15px;
-            overflow-y: auto;
-            background-color: #f7fafc;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .message {
-            max-width: 80%;
-            padding: 10px 14px;
-            border-radius: 15px;
-            font-size: 0.95rem;
-            word-wrap: break-word;
-        }
-        .bot-message {
-            background-color: #edf2f7;
-            color: #2d3748;
-            align-self: flex-start;
-            border-top-left-radius: 2px;
-        }
-        .user-message {
-            background-color: #2d3748;
-            color: #fcfbf7;
-            align-self: flex-end;
-            border-top-right-radius: 2px;
-        }
-        .chat-input-area {
-            display: flex;
-            border-top: 1px solid #e2e8f0;
-            padding: 10px;
-            background-color: #ffffff;
-        }
-        .chat-input {
-            flex: 1;
-            border: 1px solid #cbd5e0;
-            border-radius: 20px;
-            padding: 8px 16px;
-            outline: none;
-            font-size: 0.95rem;
-        }
-        .chat-send {
-            background-color: #2d3748;
-            color: #fcfbf7;
-            border: none;
-            border-radius: 20px;
-            padding: 8px 16px;
-            margin-left: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+        .card-img { width: 100%; height: 220px; object-fit: cover; background-color: #edf2f7; }
+        .card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card h3 { color: #2d3748; margin-bottom: 5px; border-bottom: 2px solid #2d3748; padding-bottom: 5px; }
+        .price-tag { font-size: 1.25rem; font-weight: bold; color: #2f855a; margin-bottom: 10px; }
+        .card p { flex-grow: 1; margin-bottom: 15px; }
+        .badge { display: inline-block; background: #edf2f7; padding: 2px 8px; border-radius: 4px; font-size: 0.85rem; align-self: flex-start; }
+        .form-section { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-top: 30px; }
+        .form-section h2 { margin-bottom: 20px; border-bottom: 2px solid #2d3748; padding-bottom: 5px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e0; border-radius: 4px; }
+        .form-group textarea { resize: vertical; height: 120px; }
+        .submit-btn { background-color: #2d3748; color: #fcfbf7; padding: 12px 24px; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; font-weight: bold; width: 100%; }
+        
+        /* Floating Chat Widget */
+        .chat-widget { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
+        .chat-button { width: 60px; height: 60px; background-color: #2d3748; color: #fcfbf7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        .chat-window { display: none; width: 320px; height: 400px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); position: absolute; bottom: 75px; right: 0; flex-direction: column; overflow: hidden; }
+        .chat-window.active { display: flex; }
+        .chat-header { background-color: #2d3748; color: #fcfbf7; padding: 15px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+        .chat-close { cursor: pointer; font-size: 1.2rem; }
+        .chat-messages { flex: 1; padding: 15px; overflow-y: auto; background-color: #f7fafc; display: flex; flex-direction: column; gap: 10px; }
+        .message { max-width: 85%; padding: 8px 12px; border-radius: 15px; font-size: 0.9rem; word-wrap: break-word; }
+        .bot-message { background-color: #edf2f7; color: #2d3748; align-self: flex-start; }
+        .user-message { background-color: #2d3748; color: #fcfbf7; align-self: flex-end; }
+        .chat-input-area { display: flex; border-top: 1px solid #e2e8f0; padding: 10px; }
+        .chat-input { flex: 1; border: 1px solid #cbd5e0; border-radius: 20px; padding: 8px 14px; outline: none; }
+        .chat-send { background-color: #2d3748; color: #fcfbf7; border: none; border-radius: 20px; padding: 8px 14px; margin-left: 5px; cursor: pointer; }
     </style>
 </head>
 <body>
 
-    <!-- Intro Discount Promotional Banner -->
     <div class="promo-banner">
         🌱 INTRODUCTORY OFFER: Use Code BUSHTEA10 for 10% Off Your First Order!
     </div>
@@ -314,25 +94,75 @@
     </header>
 
     <main class="container">
-        
-        <!-- About Us Section -->
         <section class="about-section">
             <h2>About Our Repository</h2>
-            <p>Welcome to Tajiri 3 Inc. We are dedicated to preserving and sharing the rich heritage of traditional Caribbean herbal medicine. Our catalog serves as an educational reference guide and premium source for natural bush teas, leaves, and roots passed down through generations for health and vitality.</p>
+            <p>Welcome to Tajiri 3 Inc. We are dedicated to preserving and sharing the rich heritage of traditional Caribbean herbal medicine. Our catalog serves as an educational reference guide and premium source for natural bush teas, leaves, and roots.</p>
         </section>
 
-        <!-- Interactive Search Bar -->
         <section class="search-container">
-            <input type="text" id="herbSearch" class="search-bar" placeholder="Search for herbs, price, ailments, or keywords (e.g., sleep, detox, cold)...">
+            <input type="text" id="herbSearch" class="search-bar" placeholder="Search for herbs, price, ailments...">
         </section>
 
         <h2>Our Premium Herbal Collection</h2>
-        <p style="margin-bottom: 20px;">Explore authentic Caribbean plants, leaves, and herbs curated for your wellness journey.</p>
-
-        <!-- Herb Cards Directory with Working Open-Source Photos & Per-Ounce Pricing -->
-        <section class="grid" id="herbGrid">
+        <div class="grid" id="herbGrid">
+            <!-- Cerasee -->
             <article class="card">
-                <img class="card-img" src="https://unsplash.com" alt="Cerasee Bitter Leaves">
+                <img class="card-img" src="https://wikimedia.org" alt="Cerasee Leaves">
                 <div class="card-content">
                     <h3>Cerasee (Bitter Melon)</h3>
                     <div class="price-tag">$4.50 / oz</div>
+                    <p>Traditionally used across the islands for deep blood purification, full-body detoxing, clearing skin rashes, and managing blood sugar levels.</p>
+                    <span class="badge">Detox & Blood Health</span>
+                </div>
+            </article>
+
+            <!-- Lemongrass -->
+            <article class="card">
+                <img class="card-img" src="https://wikimedia.org" alt="Lemongrass Stalks">
+                <div class="card-content">
+                    <h3>Lemongrass (Fever Grass)</h3>
+                    <div class="price-tag">$3.25 / oz</div>
+                    <p>A fragrant staple popular for treating flu, reducing heavy fever symptoms, easing chest congestion, and promoting evening relaxation.</p>
+                    <span class="badge">Immune & Relaxation</span>
+                </div>
+            </article>
+
+            <!-- Ginger & Mint -->
+            <article class="card">
+                <img class="card-img" src="https://wikimedia.org" alt="Ginger Root">
+                <div class="card-content">
+                    <h3>Ginger & Mint Blend</h3>
+                    <div class="price-tag">$3.75 / oz</div>
+                    <p>A soothing, staple island remedy widely prepared to rapidly ease digestive discomfort, morning nausea, gas, and systemic inflammation.</p>
+                    <span class="badge">Digestive Health</span>
+                </div>
+            </article>
+
+            <!-- Soursop -->
+            <article class="card">
+                <img class="card-img" src="https://wikimedia.org" alt="Soursop Leaves">
+                <div class="card-content">
+                    <h3>Soursop Leaf (Graviola)</h3>
+                    <div class="price-tag">$5.00 / oz</div>
+                    <p>Highly praised in traditional medicine for its calming properties. Often consumed as an evening brew to combat insomnia, quiet nerves, and lower blood pressure.</p>
+                    <span class="badge">Sleep & Nerve Calm</span>
+                </div>
+            </article>
+
+            <!-- Moringa -->
+            <article class="card">
+                <img class="card-img" src="https://wikimedia.org" alt="Moringa Leaves">
+                <div class="card-content">
+                    <h3>Moringa (Never Die)</h3>
+                    <div class="price-tag">$4.25 / oz</div>
+                    <p>Known as a nutritional powerhouse plant. The leaves are brewed into a daily tonic to boost energy, increase physical stamina, and strengthen natural immunity.</p>
+                    <span class="badge">Energy & Vitality</span>
+                </div>
+            </article>
+
+            <!-- Mango Leaves -->
+            <article class="card">
+                <img class="card-img" src="https://wikimedia.org" alt="Mango Leaves">
+                <div class="card-content">
+                    <h3>Mango Leaves</h3>
+                    <div class="price-tag">$3.50 / oz</div>
