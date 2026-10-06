@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajiri 3 Inc | Caribbean Bush Teas & Herbal Remedies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #fcfbf7;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #2d3748;
+            color: #fcfbf7;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        /* Search Section Styling */
+        .search-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .search-bar {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .search-bar:focus {
+            border-color: #2d3748;
+        }
+
+        /* Grid and Cards Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        .card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #2d3748;
+            padding-bottom: 5px;
+        }
+        .badge {
+            display: inline-block;
+            background: #edf2f7;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        /* Form Styling */
+        .form-section {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .form-section h2 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2d3748;
+            padding-bottom: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+        .submit-btn {
+            background-color: #2d3748;
+            color: #fcfbf7;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s ease;
+        }
+        .submit-btn:hover {
+            background-color: #4a5568;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tajiri 3 Inc</h1>
+        <p>Caribbean Bush Teas & Herbal Remedies</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- Interactive Search Bar -->
+        <section class="search-container">
+            <input type="text" id="herbSearch" class="search-bar" placeholder="Search for herbs, ailments, or keywords...">
+        </section>
+
+        <h2>Our Natural Herbal Collection</h2>
+        <p>Explore traditional Caribbean plants, leaves, and herbs and their natural remedies.</p>
+
+        <!-- Herb Cards Directory -->
+        <section class="grid" id="herbGrid">
+            <article class="card">
+                <h3>Cerasee (Bitter Melon)</h3>
+                <p>Traditionally used in the Caribbean for blood purification, detoxing, and managing diabetes symptoms.</p>
+                <span class="badge">Detox & Blood Health</span>
+            </article>
+
+            <article class="card">
+                <h3>Lemongrass (Fever Grass)</h3>
+                <p>A fragrant herb popular for treating colds, flu, and reducing fever. Excellent for relaxation blends.</p>
+                <span class="badge">Immune & Relaxation</span>
+            </article>
+
+            <article class="card">
+                <h3>Ginger & Mint Blend</h3>
+                <p>A soothing remedy widely used across the islands to ease digestive issues, nausea, and inflammation.</p>
+                <span class="badge">Digestive Health</span>
+            </article>
+        </section>
+
+        <!-- Remedy Inquiry Form -->
+        <section class="form-section">
+            <h2>Remedy Inquiry Form</h2>
+            <p style="margin-bottom: 20px;">Can't find what you need? Send us a question about specific herbs or traditional remedies, and we will get back to you.</p>
+            
+            <form id="inquiryForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" required placeholder="Enter your email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="topic">Topic of Interest</label>
+                    <select id="topic">
+                        <option value="general">General Herbal Questions</option>
+                        <option value="immune">Immune & Cold Relief</option>
+                        <option value="digestive">Digestive Support</option>
+                        <option value="detox">Detox & Cleansing</option>
+                        <option value="other">Other Plant Inquiries</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">How can we help you?</label>
+                    <textarea id="message" required placeholder="Describe what symptoms or traditional remedies you are looking to learn more about..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- JavaScript for Live Interactive Filtering -->
+    <script>
+        document.getElementById('herbSearch').addEventListener('keyup', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('#herbGrid .card');
+
+            cards.forEach(card => {
+                const textContent = card.textContent.toLowerCase();
+                if (textContent.includes(searchTerm)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+
+        // Basic form submit handling preventDefault
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your inquiry! Your request has been simulated successfully.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
